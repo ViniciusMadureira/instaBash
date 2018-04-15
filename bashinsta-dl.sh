@@ -34,4 +34,4 @@ while :; do
 done
 exit 0
 
-#./instabash-dl.sh "viniciusit"
+#./bashinsta-dl.sh "viniciusit"
