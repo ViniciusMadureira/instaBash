@@ -2,7 +2,7 @@
 # Author: Vinícius Madureira <viniciusmadureira@outlook.com>
 # Version: 0.1
 # Date: March 11th, 2018
-# Script: Bash Instagram Downloader (bashinsta-dl)
+# Script: Bash Instagram Downloader (instabash-dl)
 # Dependencies: GNU bash 4.3.42(1); GNU coreutils 8.24; curl 7.43.0; GNU Wget 1.18; GNU grep 2.22; GNU sed 4.2.2
 
 function download() {
@@ -34,4 +34,4 @@ while :; do
 done
 exit 0
 
-#./bashinsta-dl.sh "viniciusit"
+#./instabash-dl.sh "viniciusit"
