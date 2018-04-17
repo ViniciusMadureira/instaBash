@@ -40,6 +40,7 @@ while [[ -n $end_cursor ]]; do
 	json_data=$(curl --silent --globoff --cookie "cookies.txt" --cookie-jar 'cookies.txt' "https://www.instagram.com/graphql/query/?query_hash=$query_hash&variables={\"id\":\"$id\",\"first\":12,\"after\":\"$end_cursor\"}" -H "Cookie: shbid=$shbid; sessionid=$sessionid}")
 	end_cursor=$(echo "$json_data" | grep --perl-regexp --only-matching '(?U){"has_next_page":true.*"}' | tail -n 1 | sed --expression='s/"}\|.*:"//g')
 done
+rm -rf 'cookies.txt' 'dump.txt'
 exit 0
 
 #./instabash-dl "username" "password" "account_to_download_medias"
