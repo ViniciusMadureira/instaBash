@@ -23,7 +23,7 @@ csrftoken=$(cat cookies.txt | grep csrftoken | awk '{print $7}')
 curl --silent --cookie 'cookies.txt' --cookie-jar 'cookies.txt' --dump-header 'dump.txt' --globoff 'https://www.instagram.com/accounts/login/ajax/' -H 'Referer: https://www.instagram.com/accounts/login/' -H "X-CSRFToken: $csrftoken" --data-urlencode "username=$1" --data-urlencode "password=$2" --data-urlencode "queryParams={}" > /dev/null
 
 # Session settings
-account_name="$1"
+account_name="$3"
 count=1
 query_hash='42323d64886122307be10013ad2dcc44'
 first_page=$(curl --silent --cookie 'cookies.txt' --cookie-jar 'cookies.txt' "https://www.instagram.com/$account_name/")
